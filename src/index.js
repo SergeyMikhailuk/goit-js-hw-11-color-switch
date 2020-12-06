@@ -16,6 +16,7 @@ const randomIntegerFromInterval = (min, max) => {
 };
 let intervalId = null;
 function changeColor() {
+  startBtnRef.disabled = true;
   intervalId = setInterval(() => {
     console.log('change color');
     startBtnRef.style.backgroundColor =
@@ -24,5 +25,6 @@ function changeColor() {
 }
 
 function stopChangeColor() {
+  startBtnRef.disabled = false;
   clearInterval(intervalId);
 }
